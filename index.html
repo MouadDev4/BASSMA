@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pour Bassma ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #12000b, #3b001d, #72002f);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .heart {
+            position: fixed;
+            color: #ff4d88;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 70px;
+            color: #ff75a8;
+            text-shadow: 0 0 25px #ff176b;
+            animation: glow 2s infinite alternate;
+        }
+
+        header p {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #ffd6e5;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff176b;
+            }
+
+            to {
+                text-shadow: 0 0 35px #ff176b;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 35px;
+            box-shadow: 0 0 30px rgba(255, 0, 100, 0.15);
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #ff75a8;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            color: #ffeaf2;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .big-heart {
+            font-size: 90px;
+            animation: beat 1.2s infinite;
+            margin: 20px;
+        }
+
+        @keyframes beat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+            }
+        }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .reason {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .reason:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 75, 135, 0.2);
+        }
+
+        .reason span {
+            font-size: 40px;
+        }
+
+        .reason h3 {
+            margin: 12px 0;
+            color: #ff9abb;
+        }
+
+        button {
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff176b, #ff6b9d);
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 23, 107, 0.5);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        #message {
+            display: none;
+            margin-top: 25px;
+            font-size: 20px;
+            color: #ffd1e0;
+            line-height: 1.8;
+        }
+
+        /* قسم الكلب 😂❤️ */
+        .dog-section {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 117, 168, 0.3);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 35px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 0, 100, 0.15);
+        }
+
+        .dog {
+            font-size: 80px;
+            animation: dogBounce 1s infinite alternate;
+        }
+
+        @keyframes dogBounce {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-12px);
+            }
+        }
+
+        .dog-section h2 {
+            color: #ff75a8;
+            margin: 15px 0;
+            font-size: 32px;
+        }
+
+        .dog-section p {
+            font-size: 24px;
+            color: #ffeaf2;
+            line-height: 1.8;
+        }
+
+        .haw {
+            font-size: 35px;
+            font-weight: bold;
+            color: #ff75a8;
+            text-shadow: 0 0 15px #ff176b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #ffb6cd;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 45px;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+            }
+
+            .card,
+            .dog-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:25%; animation-delay:2s;">💕</div>
+    <div class="heart" style="left:40%; animation-delay:4s;">❤️</div>
+    <div class="heart" style="left:60%; animation-delay:1s;">💗</div>
+    <div class="heart" style="left:75%; animation-delay:3s;">❤️</div>
+    <div class="heart" style="left:90%; animation-delay:5s;">💖</div>
+
+    <header>
+
+        <div class="big-heart">❤️</div>
+
+        <h1>Pour Bassma</h1>
+
+        <p>
+            La personne qui rend mes journées plus belles...
+        </p>
+
+    </header>
+
+
+    <div class="container">
+
+        <section class="card">
+
+            <h2>💌 Un petit message pour toi</h2>
+
+            <p>
+                Bassma, je voulais simplement te dire que tu es
+                une personne très spéciale pour moi.
+                Ta présence rend les moments ordinaires
+                beaucoup plus beaux.
+            </p>
+
+            <br>
+
+            <p>
+                Je ne sais pas toujours comment exprimer
+                ce que je ressens, mais une chose est sûre...
+                tu occupes une place particulière dans mon cœur. ❤️
+            </p>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>❤️ Pourquoi toi ?</h2>
+
+            <div class="reasons">
+
+                <div class="reason">
+                    <span>😊</span>
+                    <h3>Ton sourire</h3>
+                    <p>
+                        Il suffit parfois d'un sourire
+                        pour changer toute une journée.
+                    </p>
+                </div>
+
+                <div class="reason">
+                    <span>✨</span>
+                    <h3>Ta personnalité</h3>
+                    <p>
+                        Tu as quelque chose de spécial
+                        que je ne trouve pas chez les autres.
+                    </p>
+                </div>
+
+                <div class="reason">
+                    <span>❤️</span>
+                    <h3>Toi, simplement</h3>
+                    <p>
+                        Pas besoin de raison compliquée.
+                        C'est juste toi.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>🔐 Un message secret</h2>
+
+            <p>
+                Clique sur le bouton...
+            </p>
+
+            <br>
+
+            <button onclick="showMessage()">
+                Ouvrir ❤️
+            </button>
+
+            <div id="message">
+
+                Bassma ❤️<br><br>
+
+                Si tu lis ça, sache simplement que
+                quelqu'un pense beaucoup à toi. 🥰<br><br>
+
+                Et cette personne...
+                c'est moi. ❤️
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <h2>🌙 Pour toujours dans mes pensées</h2>
+
+            <p>
+                Certaines personnes arrivent dans notre vie
+                et deviennent importantes sans même qu'on
+                s'en rende compte.
+            </p>
+
+            <br>
+
+            <p>
+                Pour moi, tu es l'une de ces personnes. ❤️
+            </p>
+
+        </section>
+
+
+        <!-- 😂 القسم الجديد -->
+        <section class="dog-section">
+
+            <div class="dog">🐶</div>
+
+            <h2>🐾 Une petite vérité...</h2>
+
+            <p>
+                Bassma ❤️<br>
+                ana <strong>klb dyalk</strong> 🐶
+            </p>
+
+            <p class="haw">
+                HAW HAW 🐶😂❤️
+            </p>
+
+            <p>
+                Fidèle à ma Bassma. 🐾❤️
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <footer>
+
+        Fait avec ❤️ spécialement pour Bassma
+
+        <br><br>
+
+        — Mouad 🐶❤️
+
+    </footer>
+
+
+    <script>
+
+        function showMessage() {
+
+            const message = document.getElementById("message");
+
+            if (message.style.display === "block") {
+                message.style.display = "none";
+            } else {
+                message.style.display = "block";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
